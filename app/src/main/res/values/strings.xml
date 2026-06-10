@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Target37</string>
+    <string name="enter_second">Enter Second</string>
+    <string name="enter_massage">Enter Massage</string>
 </resources>

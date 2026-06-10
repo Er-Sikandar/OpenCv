@@ -24,4 +24,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Target37"
 include(":app")
-include(":opencv")

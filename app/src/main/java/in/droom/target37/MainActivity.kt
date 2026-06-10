@@ -1,12 +1,12 @@
 package `in`.droom.target37
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import org.opencv.android.OpenCVLoader
-import org.opencv.core.Core
+import `in`.droom.target37.alermServiceWorkManager.AlermServiceWorkManagerActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,13 +20,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-     startCode()
+        startCode()
+        startActivity(Intent(this@MainActivity, AlermServiceWorkManagerActivity::class.java))
+        finish()
     }
 
     private fun startCode() {
-      if (OpenCVLoader.initLocal()){
-          Log.e("Tag", "Open CV: ${Core.VERSION}")
-      }
         val res=longestUniqueSubstringLength("abcabb")
         println("Res: ${res}")
         val arr=intArrayOf(2, 7, 11, 15)

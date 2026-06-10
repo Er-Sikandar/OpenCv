@@ -1,2 +1,0 @@
-ninja: Entering directory `/home/sikandar/ProjectKeys/DemoApp/Target37/opencv/.cxx/Debug/2e5g2e5f/x86'
-ninja: no work to do.
