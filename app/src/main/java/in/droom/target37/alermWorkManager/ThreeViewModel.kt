@@ -1,4 +1,4 @@
-package `in`.droom.target37.alermServiceWorkManager
+package `in`.droom.target37.alermWorkManager
 
 import android.graphics.Bitmap
 import android.net.Uri

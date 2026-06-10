@@ -1,4 +1,4 @@
-package `in`.droom.target37.alermServiceWorkManager
+package `in`.droom.target37.alermWorkManager
 
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -11,20 +11,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.work.Constraints
-import androidx.work.OneTimeWorkRequest
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.workDataOf
 import `in`.droom.target37.R
-import `in`.droom.target37.alermServiceWorkManager.alarm.AlarmItems
-import `in`.droom.target37.alermServiceWorkManager.alarm.AndroidAlarmManager
-import `in`.droom.target37.alermServiceWorkManager.workmanager.WorkManagerWorker
+import `in`.droom.target37.alermWorkManager.alarm.AlarmItems
+import `in`.droom.target37.alermWorkManager.alarm.AndroidAlarmManager
+import `in`.droom.target37.alermWorkManager.workmanager.WorkManagerWorker
 import `in`.droom.target37.databinding.ActivityAlermServiceWorkManagerBinding
 import java.time.LocalDateTime
 import kotlin.jvm.java
 
-class AlermServiceWorkManagerActivity : AppCompatActivity() {
+class AlermWorkManagerActivity : AppCompatActivity() {
     private val TAG="AlermServiceWorkManagerActivity"
     private val binding by lazy { ActivityAlermServiceWorkManagerBinding.inflate(layoutInflater) }
     var alarmItems: AlarmItems?=null

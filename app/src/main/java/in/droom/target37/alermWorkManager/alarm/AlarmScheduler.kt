@@ -1,4 +1,4 @@
-package `in`.droom.target37.alermServiceWorkManager.alarm
+package `in`.droom.target37.alermWorkManager.alarm
 
 interface AlarmScheduler {
     fun startAlarm(item: AlarmItems)

@@ -1,4 +1,4 @@
-package `in`.droom.target37.alermServiceWorkManager.workmanager
+package `in`.droom.target37.alermWorkManager.workmanager
 
 import android.annotation.SuppressLint
 import android.content.Context

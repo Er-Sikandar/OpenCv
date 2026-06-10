@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -15,25 +15,40 @@
         android:theme="@style/Theme.Target37">
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
-        <activity
-            android:name=".alermServiceWorkManager.AlermServiceWorkManagerActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".alermWorkManager.AlermWorkManagerActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+
+            <!--
             <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="image/*"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
 
-        <receiver android:name=".alermServiceWorkManager.alarm.AlarmReceiver"/>
+        <receiver android:name=".alermWorkManager.alarm.AlarmReceiver" />
+
+        <activity
+            android:name=".services.ServicesActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
