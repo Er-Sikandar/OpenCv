@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import `in`.droom.target37.alermWorkManager.AlermWorkManagerActivity
+import `in`.droom.target37.services.ServicesActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         startCode()
-        startActivity(Intent(this@MainActivity, AlermWorkManagerActivity::class.java))
+        startActivity(Intent(this@MainActivity, ServicesActivity::class.java))
         finish()
     }
 

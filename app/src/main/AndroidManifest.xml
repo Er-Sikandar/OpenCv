@@ -4,7 +4,17 @@
 
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+
     <application
+        android:name=".RunningApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -49,6 +59,9 @@
             android:name=".services.ServicesActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <service android:name=".services.foreground.RunningForegroundService"/>
+        <service android:name=".services.background.RunLocationService"
+            android:foregroundServiceType="location"/>
     </application>
 
 </manifest>
